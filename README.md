@@ -25,3 +25,6 @@ Step 5 should work the same as step 4. SwiftUI views should be able to accept mu
 **Notes:**
 - Messages is a good app to drag text from.
 - [Pastel](https://apps.apple.com/us/app/pastel/id413897608) is a good free app to drag colors from.
+
+
+<img src="https://github.com/Rspoon3/MultipleDragAndDrop/blob/main/screenshot.jpg" width="600">
