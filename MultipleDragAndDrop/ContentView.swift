@@ -14,7 +14,7 @@ struct ContentView: View {
     @State private var color = Color.blue
     
     enum DropType: String, CaseIterable{
-        case color, text, multi
+        case color, text, multi, broken
     }
     
     var body: some View {
@@ -43,6 +43,10 @@ struct ContentView: View {
                 case .multi:
                     content
                         .onDrop(of: [.color, .text], delegate: CombinedDropDelegate(color: $color, text: $title))
+                case .broken:
+                    content
+                        .onDrop(of: [.color], delegate: ColorDropDelegate(color: $color))
+                        .onDrop(of: [.text], delegate: TextDropDelegate(text: $title))
                 }
                 
                 Spacer()
